@@ -1,0 +1,8 @@
+sudo tcpdump -i <interface> -w http_traffic.pcap 'port 80'
+wireshark -r http_traffic.pcap
+
+sudo tcpdump -i <interface> -w ssh_traffic.pcap 'port 22'
+sudo tcpdump -i <interface> -w dnssec_traffic.pcap 'port 53'
+sudo tcpdump -i <interface> -w ipsec_traffic.pcap 'ip proto 50 or ip proto
+51'
+sudo tcpdump -i <interface> -w https_traffic.pcap 'port 443'
